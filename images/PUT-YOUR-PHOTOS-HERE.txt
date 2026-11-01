@@ -1,0 +1,1 @@
+Save your photos in this folder, then reference them like: <img src="images/cross.jpg" alt="Scientology cross">
