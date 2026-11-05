@@ -217,6 +217,7 @@ figure.emblem img {
   padding: 34px 60px;
 }
 figure.wide img { aspect-ratio: 16 / 10; }
+figure.natural img { aspect-ratio: auto; }
 figcaption { margin-top: 10px; font-size: 15px; color: var(--ink-soft); font-style: italic; }
 
 /* Timeline (Founder) */
@@ -327,3 +328,6 @@ body > footer {
   .sheet { margin: 0 12px 30px; border-radius: 22px; }
   figure img { aspect-ratio: 16 / 11; }
 }
+
+/* Range bar (Demographics) */
+.bar.range { background: repeating-linear-gradient(135deg, var(--peach) 0 10px, var(--gold) 10px 20px); opacity: 0.85; }
