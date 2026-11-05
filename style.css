@@ -280,3 +280,59 @@ footer { text-align: center; color: var(--muted); font-size: 15px; padding: 30px
     url("images/entrance-night.jpg") center top / cover no-repeat, var(--deep); }
 }
 figure img { border-top: 3px solid var(--gold); }
+
+/* ============================================================
+   v5 additions: richer content blocks
+   ============================================================ */
+.cite { color: var(--muted); font-size: 0.85em; white-space: nowrap; }
+
+/* Home hero with quote beside the title */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 56px; align-items: center; }
+.hero-quote {
+  background: rgba(5, 15, 38, 0.82);
+  border-left: 4px solid var(--gold);
+  padding: 28px 30px;
+  backdrop-filter: blur(4px);
+}
+.hero-quote .main { font-family: var(--display); font-size: 27px; line-height: 1.3; color: var(--white); margin: 0; }
+.hero-quote blockquote { margin: 18px 0 0; font-family: var(--display); font-style: italic; font-size: 18px; line-height: 1.55; color: var(--gold-pale); }
+.hero-quote .by { margin-top: 12px; font-size: 15px; color: var(--muted); }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+/* Quick facts */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; margin: 0; border-top: 1px solid var(--blue); border-left: 1px solid var(--blue); }
+.facts div { padding: 16px 18px; border-right: 1px solid var(--blue); border-bottom: 1px solid var(--blue); }
+.facts dt { font-size: 15px; color: var(--muted); }
+.facts dd { margin: 4px 0 0; font-family: var(--display); font-size: 22px; color: var(--white); line-height: 1.2; }
+
+/* Pull quotes */
+.pull { margin: 34px 0; padding: 4px 0 4px 24px; border-left: 4px solid var(--gold); }
+.pull p { margin: 0; font-family: var(--display); font-style: italic; font-size: 23px; line-height: 1.5; color: var(--white); max-width: 34em; }
+.pull footer, .pull .by { border: 0; padding: 0; text-align: left; margin-top: 10px; font-size: 15px; color: var(--muted); font-style: normal; }
+
+/* Eight dynamics */
+.dynamics { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; counter-reset: dyn; }
+.dynamics li { counter-increment: dyn; background: var(--navy); padding: 14px 16px 14px 58px; position: relative; line-height: 1.35; }
+.dynamics li::before { content: counter(dyn); position: absolute; left: 16px; top: 10px; font-family: var(--display); font-size: 28px; color: var(--gold); }
+.dynamics b { color: var(--white); display: block; }
+.dynamics span { font-size: 15px; color: var(--muted); }
+@media (max-width: 600px) { .dynamics { grid-template-columns: 1fr; } }
+
+/* Bridge ladder (Life Stages) */
+.ladder { margin: 18px 0 0; display: flex; flex-direction: column-reverse; gap: 6px; }
+.rung { display: grid; grid-template-columns: 170px 1fr; gap: 18px; align-items: center; background: var(--navy); padding: 14px 18px; border-left: 4px solid var(--blue); }
+.rung.top { border-left-color: var(--gold); background: linear-gradient(90deg, #1c3d7a, var(--navy)); }
+.rung b { font-family: var(--display); font-size: 21px; color: var(--gold); line-height: 1.2; }
+.rung span { font-size: 16px; line-height: 1.45; }
+@media (max-width: 600px) { .rung { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Organization chart (Demographics) */
+.org { display: grid; gap: 8px; margin-top: 18px; }
+.org div { background: var(--navy); padding: 14px 18px; border-left: 4px solid var(--gold); }
+.org div:nth-child(2) { margin-left: 28px; border-left-color: var(--gold-pale); }
+.org div:nth-child(3) { margin-left: 56px; border-left-color: var(--muted); }
+.org b { color: var(--white); display: block; }
+.org span { font-size: 16px; color: var(--muted); }
+
+.list-clean { margin: 12px 0 0; padding-left: 22px; }
+.list-clean li { margin-bottom: 8px; }
